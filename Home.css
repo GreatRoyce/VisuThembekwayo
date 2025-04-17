@@ -1,0 +1,289 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lovers+Quarrel&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=UnifrakturMaguntia&display=swap');
+
+:root{
+    --gradient: linear-gradient(to right, orange,purple);
+    --blue-back: #ae3232;
+}
+*, html{
+    padding: 0;
+    margin: 0;
+    max-width: 1280px;
+    overflow-x: hidden;
+  
+}
+body{
+    max-width: 1280px;
+    width: 100%;
+    font-family: Poppins;
+    
+}
+
+.hero{
+    background-image: url(./assets/Vusi-Thembekwayo-2.png);
+    height: 100vh;
+    position: fixed;
+}
+.orange_background{
+    background-image:var(--gradient);
+    height: 35px;
+    
+    align-content: center;
+    color: white;
+}
+.black_background{
+    background-color: black;
+    text-align: center;
+    height: 25vh;
+}
+.logo{
+    height: 70px;
+    margin-top: 20px;
+}
+.directories{
+    margin-top: 10px;
+    display: flex;
+    justify-content:space-evenly;
+}
+.btn_btn{
+    border: 0;
+    outline: 0;
+    background-color: black;
+    color: white;
+}
+@keyframes wedge{
+
+   0%{transform: translateX(-50%);}
+   50%{transform: translateX(0%);}
+   100%{transform: translateX(-50%);}
+ 
+}
+.forced_flex{
+    align-content: center;
+    margin-top: 15%;
+    margin-bottom: 5vh;
+    color: white;
+    height: 100px;
+    font-size: 40px;
+    overflow-y: hidden;
+    border: 3px solid white;
+    border-top: 0; border-left: 0; border-bottom: 0;
+    animation: wedge 5s infinite;
+}
+.disappear_text{
+   position:relative;
+   animation: texet 5s infinite;
+}
+@keyframes texet{
+    0%{transform: translateX(100%);}
+    50%{transform: translateX(20%);}
+    100%{transform: translateX(100%);}
+}
+.visu_does{
+    align-content: center;
+    justify-content: center;
+    color: white;
+    font-size: 22px;
+    width: 50%; 
+    margin: 0 auto; 
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 20vh;
+}
+.two_buttons{
+    margin-top: 4vh;
+    text-align: center;
+    margin-bottom: 10vh;
+}
+.button_two, .button_one{
+    background-image: var(--gradient);
+    height: 30px;
+    margin: 0 auto;
+    width: 30vh;
+    border-radius: 20px;
+    color: white;
+}
+/* .logo_move{
+    margin: auto;
+    width: 80%;
+    display: flex;
+    justify-self: center;
+    margin-bottom: 20vh;
+    gap: 1%;
+} */
+.logo_move{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+   
+
+}
+.grid, .grid_1, .grid_2, .grid_3, .grid_4, .grid_5, .grid_0{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    animation: testing 5s steps(1) infinite;
+    column-gap: 10%;
+}
+
+.logo_icon{
+    column-gap: 12%;
+    max-width: 100%;  
+    overflow-x: hidden;
+   
+}
+@keyframes testing{
+    0%{transform: translateX(100%);}
+    20%{transform: translateX(50%);}
+    40%{transform: translateX(0%);}
+    60%{transform: translateX(-50%);}
+    80%{transform: translateX(-100%);}
+    100%{transform: translateX(100%);}
+
+}
+.intro_under_hero{
+    height: 40vh;
+    padding-top: 10vh;
+    background-color: white;
+}
+h3{
+    font-size: 35px;
+    width: 40%;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 3vh;
+}
+.artt{
+    text-align: center;
+    font-size: 18px;
+    margin: auto;
+    width: 50%;
+}
+.learn{
+    margin-top: 5vh;
+}
+.pic_meetvusi{
+    width: 100%;
+    height: 90vh;
+    background-color: rgb(6, 1, 36);
+    display: flex;
+    color: white;
+    gap: 5%;
+}
+.article_2{
+    width: 80%;
+}
+.large_text{
+    margin-top: 4rem;
+    font-size: 60px;
+}
+.article_2{
+    padding-top: 10px;
+    font-size: 14px;
+}
+.white_small_background{
+    background-color: white;
+    height: 10vh;
+}
+.div_under_meet{
+    background-color: black;
+    height: 54%;
+}
+.fake_headings{
+    width: 100%;
+    display: flex;
+    color: white;
+   
+
+}
+.fake:hover{
+    position: relative;
+    overflow-y: hidden;
+    .hovering_text{
+        display: block;
+        opacity: 1;
+        padding: 40px; 
+        transition: .5s .3s;  
+        
+        transform: translateY(0%);
+    }   
+
+    .image_card{
+        transition: 0.4s .2s;
+        opacity: .3;
+    }
+}
+
+.hovering_text{
+
+    position:absolute;
+    opacity:0;
+    z-index: 10;
+    transform: translateX(0%);
+        transform: translateX(100%);
+    
+ }
+
+.top_small_gap{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 40%;
+    background-color: black;
+    
+}
+.image_card{
+   z-index: 5;
+     
+}
+.white_for_what{
+    background-color: white;
+}
+.small_large{
+    font-size: 40px;
+    margin: 70px;
+}
+.grid_for_cards{
+    height: 60vh;
+    background-color: rgb(179, 187, 245);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    
+    /* animation:  cards-move 19s infinite;
+     */
+}
+@keyframes cards-move {
+    from{
+        transform: translateX(100%);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+    
+}
+.large_button{
+    transition: 0;
+    opacity: 1;
+    display: grid;
+    grid-template-columns: 1fr;
+    height: 50%;
+}
+.last_para{
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 30%;
+}
+.last_role_card{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 0%;
+    cursor: pointer;
+    
+}
+
+.name_1:hover{
+    transform: scale(1.5);
+}
+.underdog{
+    background-image: url(assets/banner-bck.jpg);
+    height: 50%;
+    rotate: 180deg;
+    
+}
