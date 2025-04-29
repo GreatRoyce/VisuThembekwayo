@@ -27,7 +27,6 @@ body{
 .orange_background{
     background-image:var(--gradient);
     height: 35px;
-    
     align-content: center;
     color: white;
 }
@@ -120,7 +119,7 @@ body{
 .grid, .grid_1, .grid_2, .grid_3, .grid_4, .grid_5, .grid_0{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    animation: testing 5s steps(1) infinite;
+    animation: testing 10s steps(1) infinite;
     column-gap: 10%;
 }
 
@@ -132,11 +131,11 @@ body{
 }
 @keyframes testing{
     0%{transform: translateX(100%);}
-    20%{transform: translateX(50%);}
-    40%{transform: translateX(0%);}
-    60%{transform: translateX(-50%);}
-    80%{transform: translateX(-100%);}
-    100%{transform: translateX(100%);}
+    20%{transform: translateX();}
+    40%{transform: translateX();}
+    60%{transform: translateX();}
+    80%{transform: translateX();}
+    100%{transform: translateX(-100%);}
 
 }
 .intro_under_hero{
@@ -197,12 +196,12 @@ h3{
 .fake:hover{
     position: relative;
     overflow-y: hidden;
+
     .hovering_text{
         display: block;
         opacity: 1;
         padding: 40px; 
         transition: .5s .3s;  
-        
         transform: translateY(0%);
     }   
 
@@ -227,12 +226,8 @@ h3{
     margin-bottom: 10px;
     margin-left: 40%;
     background-color: black;
-    
 }
-.image_card{
-   z-index: 5;
-     
-}
+
 .white_for_what{
     background-color: white;
 }
@@ -241,29 +236,53 @@ h3{
     margin: 70px;
 }
 .grid_for_cards{
-    height: 60vh;
-    background-color: rgb(179, 187, 245);
+    background-color: white;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    overflow-x: scroll;
+       
+}
+
+.grid_cards{
+    padding: 1.5%;
+    border: 0;
+    outline: 0;
+    animation: cards-move 10s steps(1) infinite;
+}
+.grid_cards:hover{
+    padding: 0%;
+    scale: 1.015;
+    cursor: pointer;
+    transition: .5s;
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.2);
     
-    /* animation:  cards-move 19s infinite;
-     */
 }
 @keyframes cards-move {
-    from{
-        transform: translateX(100%);
-    }
-    to{
-        transform: translateX(-100%);
-    }
-    
+    0%{transform: translateX(0%);}
+    20%{transform: translateX(-100%);}
+    40%{transform: translateX(-200%);}
+    60%{transform: translateX(-300%);}
+    80%{transform: translateX(-400%);}
+    100%{transform: translateX(-500%);}
+   
+}
+.name_1:hover{
+    transition: .5s;
+    box-shadow: 5px 5px 7px rgba(0,0,0,0.5);
+}
+.large_button_white_background{
+    background-color: white;
+    height: 80vh;
 }
 .large_button{
+    margin-top: 0%;
     transition: 0;
     opacity: 1;
     display: grid;
     grid-template-columns: 1fr;
     height: 50%;
+    border: 0;
+    outline: 0;
 }
 .last_para{
     font-size: 16px;
@@ -274,16 +293,75 @@ h3{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     column-gap: 0%;
+    background-color: black; 
+}
+.lastCard:hover{
     cursor: pointer;
-    
+    opacity: .5;
+    transform: translate(3%);
 }
 
-.name_1:hover{
-    transform: scale(1.5);
-}
 .underdog{
     background-image: url(assets/banner-bck.jpg);
-    height: 50%;
-    rotate: 180deg;
+    height: 50vh;
+    background-size: 1280px;
+    background-repeat: no-repeat;
+    background-position: -25px;
+}
+.face_author_book{
+    margin-left: 60%;
+    position: absolute;
+    width: 35%;
+}
+.second_logo{
+    margin-top: 30px;
+    width: 30%;
+}
+.backdrop_footer{
+    background-color: black;
+    height: 160vh;      
+}
+
+.font_white{
+    margin-top: 40px;
+    color: white;  
+}
+.for_footer{
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.last_role_div{
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    transition: 1s;
+}
+.last_image_card:hover{
+    opacity: 0.2;
+    filter: sepia(3);
+    transition: .2s;
+    transform: scale(1.06); width:(5%);
+}
+.last_role_div:hover{
+    transition: all 3s ease;
+
+    .textOnCards{
+        padding: 10px;
+        animation: role 1s ease forwards;
+        opacity: 1;
+        transition: 1s;
+    }
+}
+.textOnCards{
+    margin: 10%;
+    width: 80%;
+    padding-top: 20px;
+    position: absolute;
+    color: white;
+    transform: translateX(130%) translateY(0%);
     
 }
+@keyframes role {
+    0%{transform: translateX(100%) translateY(20%) ;}
+    100%{transform: translateX(0%) translateY(20%) ;}
+  }
